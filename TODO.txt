@@ -10,3 +10,13 @@ Hardware Modules
 	Potetiometer Read
 	LED Seven Seg Display Matrix (Tristate)
 	PWM RGB LED
+	
+	
+ButtonToggleLedDemo
+	Button Toggles LED state
+		Leds
+			pins
+		Timers (button debounce)
+		Buttons
+			pins
+			timers
