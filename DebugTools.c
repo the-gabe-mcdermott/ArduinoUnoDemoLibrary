@@ -6,6 +6,11 @@
  */ 
 #include "DebugTools.h"
 
+void InitDebug(void)
+{
+	USART_init();
+}
+
 char DebugGetWaitForChar(void)
 {
 	return USART_receive();

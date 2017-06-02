@@ -6,7 +6,7 @@
  */ 
 #include "Leds.h"
 
-
+/*
 void InitLed(void)
 {
 	uint8_t directionConfig = DDRB;
@@ -41,3 +41,4 @@ uint8_t ReadLed(void)
 {
 	return PINB;
 }
+*/

@@ -11,6 +11,7 @@
 #include <asf.h>
 #include "USART.h"
 
+void InitDebug(void);
 void DebugPrintString(char* printThis);
 void DebugPrintData(uint8_t printThis);
 void DebugPrintNewLine(void);

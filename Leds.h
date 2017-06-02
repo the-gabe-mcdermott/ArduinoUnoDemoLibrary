@@ -8,7 +8,7 @@
 
 #ifndef LEDS_H_
 #define LEDS_H_
-
+#include "asf.h"
 #include "PinDefinitions.h"
 
 void InitLed(void);
