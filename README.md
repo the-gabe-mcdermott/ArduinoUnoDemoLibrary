@@ -1,9 +1,13 @@
-# ArduinoUnoPinControlDemo
+# Arduino Uno Demo Library
 
 Intro
-	This is a demo project for configuration, reading, and writing to the header pins on the Arduino Uno
-		This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417)
-		This project uses the Arduino Uno R3, equiped with an Atmel Atmega328P
+	This is a library containing a collection of demo projects for the Arduino Uno
+	
+	These projects include:
+		-Button Reading and LED control
+			
+	This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417)
+	This project uses the Arduino Uno R3, equiped with an Atmel Atmega328P
 
 Contents:
 	1) LICENSE
