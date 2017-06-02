@@ -10,7 +10,7 @@
 
 void InitLeds(void)
 {
-	LED_OUTPUT_REG = ConfigurePinsForOutput(LED_DIRECTION_REG, (LED_GREEN_BIT_MASK | LED_RED_BIT_MASK) );
+	LED_DIRECTION_REG = ConfigurePinsForOutput(LED_DIRECTION_REG, (LED_GREEN_BIT_MASK | LED_RED_BIT_MASK) );
 	//Initialize the LED Values.
 	// LED Green starts off
 	LED_OUTPUT_REG = ClearPinValues(LED_OUTPUT_REG, LED_GREEN_BIT_MASK);
