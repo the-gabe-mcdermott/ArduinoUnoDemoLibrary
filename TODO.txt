@@ -1,0 +1,12 @@
+Hardware Modules
+	Pin I/O
+	Uart
+	Timers
+	ADC Read
+	PWM
+	
+"Application" Modules
+	Button Debounce
+	Potetiometer Read
+	LED Seven Seg Display Matrix (Tristate)
+	PWM RGB LED
