@@ -12,7 +12,19 @@
 #include "asf.h"
 #include "Pins.h"
 
+/****************************************
+* InitButtons
+*	Initializes pin 11 as input for button reading
+*	Call before using other functions.
+*
+***********************************************/
 void	InitButtons(void);
+
+/**********************************************
+* ReadButtons
+*	Returns a 0 if button unpressed
+*	Returns a 1 if button pressed
+**********************************************/
 uint8_t ReadButtons(void);
 
 #define BUTTON_OUTPUT_REG PORTB

@@ -23,7 +23,8 @@ void ButtonToggleLedInit(void);
 * ButtonToggleLedLoop
 *	Endless loop.
 *	Reads push button
-*	Toggles an LED on every push	 
+*	Toggles between green (pin 13)
+*	and red (pin 12) leds on every push.	 
 ************************************/
 void ButtonToggleLedLoop(void);
 
