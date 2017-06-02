@@ -37,4 +37,10 @@ uint8_t ClearPinValues(uint8_t regValue, uint8_t bitsToClear)
 	return regValue;
 }
 
-
+uint8_t ReadPinValues(uint8_t regValue, uint8_t bitsToRead)
+{
+	//Have the read value
+	//Mask for only the bits we want.
+	regValue &= bitsToRead;
+	return regValue;
+}

@@ -65,6 +65,8 @@ uint8_t SetPinValues(uint8_t regValue, uint8_t bitsToSet);
 ********************************************************/
 uint8_t ClearPinValues(uint8_t regValue, uint8_t bitsToClear);
 
+uint8_t ReadPinValues(uint8_t regValue, uint8_t bitsToRead);
+
 
 
 //Masks for individual pin positions 0-7
@@ -78,11 +80,5 @@ uint8_t ClearPinValues(uint8_t regValue, uint8_t bitsToClear);
 #define BIT_0 0x01
 
 
-#define BUTTON_PORT_OUTPUT_REG PORTB
-#define BUTTON_PORT_CONFIG_REG DDRB
-#define BUTTON_PORT_INPUT_REG PINB
-
-#define BUTTON_BIT_MASK Bit_4
-#define BUTTON_BIT_POSITION 4
 
 #endif /* PINS_H_ */

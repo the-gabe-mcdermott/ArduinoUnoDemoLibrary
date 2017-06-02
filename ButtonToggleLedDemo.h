@@ -9,6 +9,9 @@
 #ifndef BUTTONTOGGLELEDDEMO_H_
 #define BUTTONTOGGLELEDDEMO_H_
 
+#include "Buttons.h"
+#include "Leds.h"
+
 /******************************
 * ButtonToggleLedInit
 *	Initilizes ButtonToggle project.
