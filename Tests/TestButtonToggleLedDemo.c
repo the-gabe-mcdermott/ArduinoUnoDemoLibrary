@@ -7,7 +7,7 @@
 #include "TestButtonToggleLedDemo.h"
 #include "DebugTools.h"
 
-#include "TestRegister.h"
+
 
 uint8_t RunAllButtonToggleLedTests(void)
 {
