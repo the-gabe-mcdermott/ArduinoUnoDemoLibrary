@@ -5,17 +5,19 @@
  *  Author: Gabe
  */ 
 #include "ButtonToggleLedDemo.h"
-#include "Register.h"
+#include "Leds.h"
 
 void ButtonToggleLedInit(void)
 {
-
+	InitLeds();
 }
 
 void ButtonToggleLedLoop(void)
 {
 	while (1)
 	{
+			AssignLedGreen(1);
+			AssignLedRed(0);
 			//If( Read button )
 			// ToggleLed
 	}

@@ -6,39 +6,31 @@
  */ 
 #include "Leds.h"
 
-/*
-void InitLed(void)
-{
-	uint8_t directionConfig = DDRB;
-	uint8_t startingValueConfig = PORTB;
 
-	//Setup PORTB-5 
-	//output (1), starting low.
-	directionConfig |= Bit_5;	
-	//starting value 0;
-	startingValueConfig &= ~Bit_5;
-	
-	PINB = startingValueConfig;
-	DDRB = directionConfig;
-}
 
-void SetLed(void)
+void InitLeds(void)
 {
-	
-	uint8_t currentValue = PORTB;
-	PORTB = currentValue | Bit_5;
+	LED_OUTPUT_REG = ConfigurePinsForOutput(LED_DIRECTION_REG, (LED_GREEN_BIT_MASK | LED_RED_BIT_MASK) );
+	//Initialize the LED Values.
+	// LED Green starts off
+	LED_OUTPUT_REG = ClearPinValues(LED_OUTPUT_REG, LED_GREEN_BIT_MASK);
+	// LED Red starts on
+	LED_OUTPUT_REG = SetPinValues(LED_OUTPUT_REG, LED_RED_BIT_MASK);
 	
 }
 
-void ClearLed(void)
+void AssignLedGreen(uint8_t assignValue)
 {
-	uint8_t currentValue = PORTB;
-	PORTB = currentValue & ~Bit_5;
-	
+	if(!assignValue)
+		LED_OUTPUT_REG = ClearPinValues(LED_OUTPUT_REG, LED_GREEN_BIT_MASK);
+	else
+		LED_OUTPUT_REG = SetPinValues(LED_OUTPUT_REG, LED_GREEN_BIT_MASK);
 }
 
-uint8_t ReadLed(void)
+void AssignLedRed(uint8_t assignValue)
 {
-	return PINB;
+	if(!assignValue)
+		LED_OUTPUT_REG = ClearPinValues(LED_OUTPUT_REG, LED_RED_BIT_MASK);	
+	else		
+		LED_OUTPUT_REG = SetPinValues(LED_OUTPUT_REG, LED_RED_BIT_MASK);
 }
-*/

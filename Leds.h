@@ -3,18 +3,49 @@
  *
  * Created: 5/23/2017 16:26:35
  *  Author: Gabe
- */ 
+ */
 
 
 #ifndef LEDS_H_
 #define LEDS_H_
 #include "asf.h"
-#include "PinDefinitions.h"
+#include "Pins.h"
 
-void InitLed(void);
-void SetLed(void);
-void ClearLed(void);
-uint8_t ReadLed(void);
 
+
+
+/*****************************************
+* InitLeds
+*	Initializes all LEDs in use
+*		Assigns direction
+*		Assigns starting value.
+******************************************/
+void InitLeds(void);
+
+/****************************************
+*	AssignLedGreen
+*		Assign Green LED to on or off
+*			0 assigns to off.
+*			Any other value assigns to 1
+**************************************/
+void AssignLedGreen(uint8_t assignValue);
+
+/****************************************
+*	AssignLedRed
+*		Assign Red LED to on or off
+*			0 assigns to off.
+*			Any other value assigns to 1
+**************************************/
+void AssignLedRed(uint8_t assignValue);
+
+
+//LED Registers.
+#define LED_DIRECTION_REG DDRB
+#define LED_OUTPUT_REG PORTB
+#define LED_INPUT_REG PINB
+
+//LED Pin Positions.
+#define LED_GREEN_BIT_MASK BIT_5 //Arduino Digital Pin 13, Wired to Green LED
+#define LED_RED_BIT_MASK BIT_4 //Arduino Digital Pin 12, Wired to Red LED
 
 #endif /* LEDS_H_ */
