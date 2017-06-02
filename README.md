@@ -2,7 +2,6 @@
 
 Intro
 	This is a library containing a collection of demo projects for the Arduino Uno
-	
 	These projects include:
 		-Button Reading and LED control
 			
