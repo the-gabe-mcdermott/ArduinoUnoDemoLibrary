@@ -38,47 +38,44 @@ Contents:
 	
 	A) Dowload From Github
 		
-		To get the source file on your computer, you can either download them from Github
-		in a zip file, or clone the repository.
+	To get the source file on your computer, you can either download them from Github
+	as a zip file, or clone the repository.
 			
-		Download ZIP:
-				https://github.com/the-gabe-mcdermott/ArduinoUnoPinControlDemo		
-				Click the "Clone or Download" button near the top left corner of the page.
+	Download ZIP:
+			https://github.com/the-gabe-mcdermott/ArduinoUnoDemoLibrary	
+			Click the "Clone or Download" button near the top left corner of the page.
 
-		Clone Repo:
-			You will want to Clone the repo into your AtmelStudio "src" folder.
+	Clone Repo:
+		You will want to Clone the repo into your AtmelStudio "src" folder.
 
-			You can use any number of git tools for whatever OS you are using.
+		You can use any number of git tools for whatever OS you are using.
 	
-			If you have git installed as a command line tool, you can navigate to the "src" folder and call
+		If you have git installed as a command line tool, you can navigate to the "src" folder and call
 				
-				git clone https://github.com/the-gabe-mcdermott/ArduinoUnoPinControlDemo.git
-
+			git clone https://github.com/the-gabe-mcdermott/ArduinoUnoDemoLibrary.git
 
 
 	B) Include Code in Atmel Studio Project
-			Once you have the code on your machine, you will need to incude it into your AtmelStudio project, and into your "main" file.
+		Once you have the code on your machine, you will need to incude it into your AtmelStudio project, and into your "main" file.
 			
-			Include into AtmelStudio
-				At the top of the Solution Explorer pane, select "Show All Files" in the toolbar.
-				All the files contained within the project directory should now be visible.
-				Find the folder containing the Demo code
-				Right click the folder and select "Include in Project"
+		Include into AtmelStudio
+			At the top of the Solution Explorer pane, select "Show All Files" in the toolbar.
+			All the files contained within the project directory should now be visible.
+			Find the folder containing the Demo code
+			Right click the folder and select "Include in Project"
 
-			Include into your main
-				You will need to update the project settings to add the new folder as a place the compiler can find code.
-				In the Solution Explorer right click on the project name and select "Properties"
-				Select Toolchain->AVR/GNU C Compiler->Directories
-				Select the "Add Item Button"
-				You can type in the relative path to the folder, or use the file navigator provided to select the folder.
-				Close the properties pane
-				You may now include the demo files like you would any other files.
+		Include into your main
+			You will need to update the project settings to add the new folder as a place the compiler can find code.
+			In the Solution Explorer right click on the project name and select "Properties"
+			Select Toolchain->AVR/GNU C Compiler->Directories
+			Select the "Add Item Button"
+			You can type in the relative path to the folder, or use the file navigator provided to select the folder.
+			Close the properties pane
+			You may now include the demo files like you would any other files.
 				
-				Ex:
-					#include "PinDefinitions.h"
+			Ex:
+				#include "PinDefinitions.h"
 
-
-	C) Error Recovery?
 
 3) Making Changes to This Code
 
@@ -87,8 +84,4 @@ Contents:
 
 	When you are done with your changes, you can submit a pull request on this repo
 	and I will review your contribution and potentially add it to the project.
-
-
-
-Happy coding!
 
