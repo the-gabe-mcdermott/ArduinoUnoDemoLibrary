@@ -59,21 +59,33 @@ Contents:
 
 
 	B) Include Code in Atmel Studio Project
-		Once you have the code on your machine, you will need to incude it into your AtmelStudio project, and into your "main" file.
+		Once you have the code on your machine, you will need to incude it into your 
+		AtmelStudio project, and into your "main" file.
 			
 		Include into AtmelStudio
 			At the top of the Solution Explorer pane, select "Show All Files" in the toolbar.
+			
 			All the files contained within the project directory should now be visible.
+			
 			Find the folder containing the Demo code
+			
 			Right click the folder and select "Include in Project"
 
 		Include into your main
-			You will need to update the project settings to add the new folder as a place the compiler can find code.
+			You will need to update the project settings to add the new folder as a place the 
+			compiler can find code.
+			
 			In the Solution Explorer right click on the project name and select "Properties"
+			
 			Select Toolchain->AVR/GNU C Compiler->Directories
+			
 			Select the "Add Item Button"
-			You can type in the relative path to the folder, or use the file navigator provided to select the folder.
+			
+			You can type in the relative path to the folder, or use the file navigator provided 
+			to select the folder.
+			
 			Close the properties pane
+			
 			You may now include the demo files like you would any other files.
 				
 			Ex:
@@ -87,4 +99,3 @@ Contents:
 
 	When you are done with your changes, you can submit a pull request on this repo
 	and I will review your contribution and potentially add it to the project.
-
