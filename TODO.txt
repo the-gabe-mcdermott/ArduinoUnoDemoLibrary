@@ -1,7 +1,5 @@
 Planned Future Improvments:
-	Move the DebugTools.h/c into the Test directory.
-	Impliment my own UART in the Test directory	
-
+	Impliment my own UART
 	Add a Timers.h/c
 	Add Button Debounce to Button.h
 	Add my own Port and Pin definitions to remove dependancy from
@@ -9,7 +7,8 @@ Planned Future Improvments:
 
 Planned Future Demos:
 
-	Control dail:	Potetiometer and ADC reading
+	Control Dial:	Potetiometer and ADC reading
 	LED Matrix:		Tristate and multiplexing
 	RGB LED:		PWM control
 	Thermometer:	Sensor Read
+

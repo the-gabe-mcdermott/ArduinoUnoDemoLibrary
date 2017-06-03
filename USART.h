@@ -1,8 +1,15 @@
 /*
  * USART.h
+ *  I Didn't write this codebase.
  *
- * Created: 5/23/2017 19:39:45
- *  Author: Gabe
+ *	I got this UART implementation from an example 
+ *	on this blog:
+ *		https://hekilledmywire.wordpress.com/2011/01/05/using-the-usartserial-tutorial-part-2/
+ *
+ *	No author listed. :/ 
+ *
+ *	I'll be writing a UART implementation of my own to
+ *	Add to this example soon. 
  */ 
 
 
