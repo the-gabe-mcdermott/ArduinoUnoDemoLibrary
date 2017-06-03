@@ -21,10 +21,19 @@ Contents:
 A) Including This Code In Your AtmelStudio Project
 	
 	Steps:
+
+		0) Start a New AtmelStudio Project for the Arduino Uno
 		1) Download Fom Github
 		2) Add the Folder as a Source Location in AtemlStudio
 		3) Include into your project main
-	
+
+
+	0) Start a New AtmelStudio Project for the Arduino Uno
+			I won't go over that here, but there is an excelent
+			guide from MicroDigitalEd.com here:
+			http://www.microdigitaled.com/AVR/Hardware/Arduino/UsingArduinoBoardsInAtmelStudio.pdf
+
+
 	1) Dowload From Github
 		
 	To get the source file on your computer, you can either download them from Github
