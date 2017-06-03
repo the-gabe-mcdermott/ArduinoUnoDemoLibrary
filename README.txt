@@ -31,29 +31,30 @@ A) Including This Code In Your AtmelStudio Project
 	0) Start a New AtmelStudio Project for the Arduino Uno
 			I won't go over that here, but there is an excelent
 			guide from MicroDigitalEd.com here:
-			http://www.microdigitaled.com/AVR/Hardware/Arduino/UsingArduinoBoardsInAtmelStudio.pdf
+	http://www.microdigitaled.com/AVR/Hardware/Arduino/UsingArduinoBoardsInAtmelStudio.pdf
 
 
 	1) Dowload From Github
 		
-	To get the source file on your computer, you can either download them from Github
+	To get the source files on your computer, you can either download them from Github
 	as a zip file, or clone the repository.
 			
 	Download ZIP:
-			https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
-			Click the "Clone or Download" button near the top left corner of the page.
+		https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
+		Click the "Clone or Download" button near the top left corner of the page.
 
 	Clone Repo:
 		You will want to Clone the repo into your AtmelStudio "src" folder.
 
-		You can use any number of git tools for whatever OS you are using.
+		You can use any number of git tools for whatever OS you are using. 
 	
-		If you have git installed as a command line tool, you can navigate to the "src" folder and call
+		If you have git installed as a command line tool, navigate to the "src" folder and call
 				
-			git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
+	git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
 
 
 	2) Add the Folder as a Source Location in AtemlStudio
+	
 		Once you have the code on your machine, you will need to incude it into your 
 		AtmelStudio project, and into your "main" file.
 			
@@ -66,7 +67,8 @@ A) Including This Code In Your AtmelStudio Project
 			
 			Right click the folder and select "Include in Project"
 
-	C)	Include into your project main
+	3)	Include into your project main
+	
 			You will need to update the project settings to add the new folder as a place the 
 			compiler can find code.
 			
@@ -86,17 +88,17 @@ A) Including This Code In Your AtmelStudio Project
 			Ex:
 				#include "ButtonToggleLedDemo.h"
 				
-		The quickest way to start actually using the code is to checkout the functions found in:
-			"ButtonToggleLedDemo."
+			The quickest way to start actually using the code is to checkout the functions found in:
+				"ButtonToggleLedDemo."
 		
-		I recomend you also read/use the simple test framework found at:
-			"Tests/TestButtonToggleLedDemo.h"
-		It contains a few simple tests, and can be easily extended with your own.	
+			I recomend you also read/use the simple test framework found at:
+				"Tests/TestButtonToggleLedDemo.h"
+			It contains a few simple tests, and can be easily extended with your own.	
 
 
 B) Making Changes to This Code
 
-	If you would like to make changes to this code, you can fork this repository
+	If you would like to contribute to this code, you can fork this repository
 	and save your changes in the new repo. 
 
 	When you are done with your changes, submit a pull request on this repo and I'll
