@@ -16,7 +16,7 @@
 *		regValue:	Register address of the port 
 *					you want setup for output.
 *		Returns:		Value to write to the register.
-*		regValue:		data read from the register.
+*		regValue:		Data from the register.
 *		bitsToConfigure:	Value with "1"'s in the bit positions you
 *							want configured for output.
 *							and "0"'s in the bit positions you want

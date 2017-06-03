@@ -9,7 +9,7 @@
 void InitButtons(void)
 {
 	//Set PORT B bit 3 (digital pin 11) to Input. 
-	BUTTON_DIRECTION_REG = ConfigurePinsForInput(BUTTON_DIRECTION_REG, BUTTON_BIT_MASK);
+	ACCESS_BUTTON_DIRECTION_REG = ConfigurePinsForInput(ACCESS_BUTTON_DIRECTION_REG, BUTTON_BIT_MASK);
 	
 }
 
@@ -18,7 +18,7 @@ uint8_t ReadButtons(void)
 {
 	uint8_t buttonReadResults = 0;
 	
-	buttonReadResults = ReadPinValues(BUTTON_INPUT_REG, BUTTON_BIT_MASK);
+	buttonReadResults = ReadPinValues(ACCESS_BUTTON_INPUT_REG, BUTTON_BIT_MASK);
 	
 	buttonReadResults &= BUTTON_BIT_MASK;
 	

@@ -40,9 +40,9 @@ void AssignLedRed(uint8_t assignValue);
 
 
 //LED Registers.
-#define LED_DIRECTION_REG DDRB
-#define LED_OUTPUT_REG PORTB
-#define LED_INPUT_REG PINB
+#define ACCESS_LED_DIRECTION_REG DDRB
+#define ACCESS_LED_OUTPUT_REG PORTB
+#define ACCESS_LED_INPUT_REG PINB
 
 //LED Pin Positions.
 #define LED_GREEN_BIT_MASK BIT_5 //Arduino Digital Pin 13, Wired to Green LED

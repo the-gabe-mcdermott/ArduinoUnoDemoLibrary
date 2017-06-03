@@ -27,9 +27,9 @@ void	InitButtons(void);
 **********************************************/
 uint8_t ReadButtons(void);
 
-#define BUTTON_OUTPUT_REG PORTB
-#define BUTTON_DIRECTION_REG DDRB
-#define BUTTON_INPUT_REG PINB
+#define ACCESS_BUTTON_OUTPUT_REG PORTB
+#define ACCESS_BUTTON_DIRECTION_REG DDRB
+#define ACCESS_BUTTON_INPUT_REG PINB
 
 #define BUTTON_BIT_MASK BIT_3
 
