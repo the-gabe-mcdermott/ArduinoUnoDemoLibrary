@@ -27,9 +27,5 @@ uint8_t RunAllButtonToggleLedTests(void)
 	DebugPrintNewLine();
 	testResults[1] = TestSetAndClearPins();
 	
-	
-	
-	
-	
 	return allTestsPass;
 }

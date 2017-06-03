@@ -10,7 +10,4 @@
 #define BUTTONSETPINTEST_H_
 
 
-
-
-
 #endif /* BUTTONSETPINTEST_H_ */

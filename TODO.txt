@@ -1,25 +1,15 @@
-Hardware Modules
-	Pin I/O
-	Uart
-	Timers
-	ADC Read
-	PWM
-	
-"Application" Modules
-	Button Debounce
-	Potetiometer Read
-	LED Seven Seg Display Matrix (Tristate)
-	PWM RGB LED
-	
-	
-ButtonToggleLedDemo
-	Button Toggles LED state
-		Leds
-			pins
-		Timers (button debounce)  //Need to add this class!
-		Buttons
-			pins 
-			timers  
-		Uart (for testing) //Need to write your own.
-			
+Planned Future Improvments:
+	Rename repo
+	Improve documentation of Test library
+	Impliment my own UART
+	Add a referance on how to program the Arduino in Atmel Studio
+	Move the DebugTools.h/c into the Test directory.
+	Add a Timers.h/c
+	Add Button Debounce to Button.h
 
+Planned Future Demos:
+
+	Control dail:	Potetiometer and ADC reading
+	LED Matrix:		Tristate and multiplexing
+	RGB LED:		PWM control
+	Thermometer:	Sensor Read
