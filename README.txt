@@ -55,11 +55,8 @@ A) Including This Code In Your AtmelStudio Project
 
 	2) Add the Folder as a Source Location in AtemlStudio
 	
-		Once you have the code on your machine, you will need to incude it into your 
-		AtmelStudio project, and into your "main" file.
-			
-		Include into AtmelStudio
-			At the top of the Solution Explorer pane, select "Show All Files" in the toolbar.
+		Show Folder in AtemelStudio Solution sindow
+			At the top of the Solution Explorer window, select "Show All Files" in the toolbar.
 			
 			All the files contained within the project directory should now be visible.
 			
@@ -67,8 +64,7 @@ A) Including This Code In Your AtmelStudio Project
 			
 			Right click the folder and select "Include in Project"
 
-	3)	Include into your project main
-	
+		Add Folder as A Project Source Directory 
 			You will need to update the project settings to add the new folder as a place the 
 			compiler can find code.
 			
@@ -81,14 +77,10 @@ A) Including This Code In Your AtmelStudio Project
 			You can type in the relative path to the folder, or use the file navigator provided 
 			to select the folder.
 			
-			Close the properties pane
+			Close the properties window
 			
-			You may now include any of the files in the demo you wish.
-				
-			Ex:
-				#include "ButtonToggleLedDemo.h"
-				
-			The quickest way to start actually using the code is to checkout the functions found in:
+	3)	Include into your project main
+			The quickest way to start actually using the code is to use the functions found in:
 				"ButtonToggleLedDemo."
 		
 			I recomend you also read/use the simple test framework found at:
