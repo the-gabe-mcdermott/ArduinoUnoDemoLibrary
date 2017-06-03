@@ -19,6 +19,7 @@ uint8_t RunAllButtonToggleLedTests(void)
 	uint8_t numTests = 2;
 	InitDebug();
 	
+	//!!!! Blocking Call!!!!
 	//Wait for the testing user to get a uart window open.
 	DebugGetWaitForChar();
 	
