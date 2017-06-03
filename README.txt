@@ -1,4 +1,4 @@
-# Arduino Uno Button Toggle LED project
+# Arduino Uno LED and Toggle Button Example Project
 
 
 
@@ -18,7 +18,6 @@ Contents:
 
 
 
-
 A) Including This Code In Your AtmelStudio Project
 	
 	Steps:
@@ -32,7 +31,7 @@ A) Including This Code In Your AtmelStudio Project
 	as a zip file, or clone the repository.
 			
 	Download ZIP:
-			https://github.com/the-gabe-mcdermott/ArduinoUnoDemoLibrary	
+			https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
 			Click the "Clone or Download" button near the top left corner of the page.
 
 	Clone Repo:
@@ -42,7 +41,7 @@ A) Including This Code In Your AtmelStudio Project
 	
 		If you have git installed as a command line tool, you can navigate to the "src" folder and call
 				
-			git clone https://github.com/the-gabe-mcdermott/ArduinoUnoDemoLibrary.git
+			git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
 
 
 	2) Add the Folder as a Source Location in AtemlStudio

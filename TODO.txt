@@ -1,9 +1,9 @@
 Planned Future Improvments:
-	Rename repo
 	Improve documentation of Test library
 	Impliment my own UART
 	Add a referance on how to program the Arduino in Atmel Studio
 	Move the DebugTools.h/c into the Test directory.
+	
 	Add a Timers.h/c
 	Add Button Debounce to Button.h
 
