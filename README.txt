@@ -9,7 +9,7 @@ Intro
 		out of two LEDs. 
 
 	This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417)
-	This project uses the Arduino Uno R3, equiped with an Atmel Atmega328P
+	This project uses the Arduino Uno R3, equiped with an Atmel ATmega328P
 
 Contents:
 	A) Including This Code In Your AtmelStudio Project
@@ -22,17 +22,43 @@ A) Including This Code In Your AtmelStudio Project
 	
 	Steps:
 
-		0) Start a New AtmelStudio Project for the Arduino Uno
+		0) Install Ateml Studio 7 and Create a New Arduino Uno Project
 		1) Download Fom Github
 		2) Add the Folder as a Source Location in AtemlStudio
 		3) Include into your project main
 
 
-	0) Start a New AtmelStudio Project for the Arduino Uno
-			I won't go over that here, but there is an excelent
-			guide from MicroDigitalEd.com here:
-	http://www.microdigitaled.com/AVR/Hardware/Arduino/UsingArduinoBoardsInAtmelStudio.pdf
+		0) Install Ateml Studio 7 and Create a New Arduino Uno Project
+			You can download Ateml Studio 7 here:
+				http://www.atmel.com/microsite/atmel-studio/
+			Follow the Installer Instrctions
+			
+			Once Atmel Studio is Installed, creaate a new Arduino Uno Project
+				Select: 
+					File->New Project
+				
+				You will see a list of project types you can use.
+				
+				Select a "GCC C ASF Board Project" 
+				
+				Name the project whatever you would like,
+				and update the "Location" feild to wherever
+				you want the project to live on your computer.
+					
+				Select "OK"
 
+				You will see a long list of different microcontrolers.
+				
+				Select the "Atmega328P"
+					You can use the Search tool in the top right hand corner
+					"ATmega328P"
+				
+				The bottom pane will update to display
+					"Atmega328P Xplained MINI - Atmega328p" and
+					"User Board template - meaAVR"
+					
+					
+				
 
 	1) Dowload From Github
 		
