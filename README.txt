@@ -66,7 +66,15 @@ A) Including This Code In Your AtmelStudio Project
 				the project "main.c"
 					
 	1) Configure Atmel Studio to Use Arduino Uno USB Driver	
-	
+		You will need to show Atmel Studio where the Arduino Uno USB Driver is on
+		your computer. You will also need to specify which COM port Atmel Studio should use
+		to program the Aruduino.
+		
+			Plug your Arduino Uno into your computer with a USB cable.
+		
+			Title: Send to Arduino UNO
+			Command: C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
+			Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P COM5 -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
 
 	2) Dowload From Github
 		
