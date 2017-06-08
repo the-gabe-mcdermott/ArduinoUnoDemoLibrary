@@ -22,10 +22,11 @@ A) Including This Code In Your AtmelStudio Project
 	
 	Steps:
 
-		0) Install Ateml Studio 7 and Create a New Arduino Uno Project
-		1) Download Fom Github
-		2) Add the Folder as a Source Location in AtemlStudio
-		3) Include into your project main
+		0) Install Atmel Studio 7 and Create a New Arduino Uno Project
+		1) Configure Atmel Studio to Use Arduino Uno USB Driver
+		2) Download Fom Github
+		3) Add the Folder as a Source Location in AtemlStudio
+		4) Include into your project main
 
 
 		0) Install Ateml Studio 7 and Create a New Arduino Uno Project
@@ -33,7 +34,7 @@ A) Including This Code In Your AtmelStudio Project
 				http://www.atmel.com/microsite/atmel-studio/
 			Follow the Installer Instrctions
 			
-			Once Atmel Studio is Installed, creaate a new Arduino Uno Project
+			Once Atmel Studio is Installed, create a new Arduino Uno Project
 				Select: 
 					File->New Project
 				
@@ -55,12 +56,19 @@ A) Including This Code In Your AtmelStudio Project
 				
 				The bottom pane will update to display
 					"Atmega328P Xplained MINI - Atmega328p" and
-					"User Board template - meaAVR"
+					"User Board template - megaAVR"
 					
-					
+				Select "User Board template - megaAVR" and press "OK".
 				
+				You should see a starter project. On the right hand side
+				will be the Solution Explorer Pane. The Solution Explorer
+				Pane will show a "src" directory, inside of which will be
+				the project "main.c"
+					
+	1) Configure Atmel Studio to Use Arduino Uno USB Driver	
+	
 
-	1) Dowload From Github
+	2) Dowload From Github
 		
 	To get the source files on your computer, you can either download them from Github
 	as a zip file, or clone the repository.
@@ -79,7 +87,7 @@ A) Including This Code In Your AtmelStudio Project
 	git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
 
 
-	2) Add the Folder as a Source Location in AtemlStudio
+	3) Add the Folder as a Source Location in AtemlStudio
 	
 		Show Folder in AtemelStudio Solution sindow
 			At the top of the Solution Explorer window, select "Show All Files" in the toolbar.
@@ -105,7 +113,7 @@ A) Including This Code In Your AtmelStudio Project
 			
 			Close the properties window
 			
-	3)	Include into your project main
+	4)	Include into your project main
 			The quickest way to start actually using the code is to use the functions found in:
 				"ButtonToggleLedDemo."
 		
