@@ -1,5 +1,4 @@
 Planned Future Improvments:
-	Add instructions for installing the AVR programmer tool
 	Impliment my own UART
 	Add a Timers.h/c
 	Add Button Debounce to Button.h

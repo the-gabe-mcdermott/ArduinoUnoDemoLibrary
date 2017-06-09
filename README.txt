@@ -187,20 +187,18 @@ A) Including This Code In Your AtmelStudio Project
 		
 	1) Dowload From Github
 		
-		To get the source files on your computer, you can either download them from Github
-		as a zip file, or clone the repository.
-				
-		Download ZIP:
-			https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
-			Click the "Clone or Download" button near the top left corner of the page.
-
-		Clone Repo:
-			You will want to Clone the repo into your AtmelStudio "src" folder.
-
-			You can use any number of git tools for whatever OS you are using. 
-	
-			If you have git installed as a command line tool, navigate to the "src" folder and call			
-				git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
+		
+		If you are not comfortable with git, download the code as a zip file from the URL below.
+		Copy the zip file into the "src" directory of the new Atmel Studio project and unzip it there.
+			Zip download URL:
+				https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample/archive/master.zip
+		
+		If you are comfortable with git and Github use your favorite git tool and
+		place the files in the "src" directory of the new Atmel Studio project. 
+			git URL:
+				https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
+			
+			
 	
 
 	2) Add the Folder as a Source Location in AtemlStudio
