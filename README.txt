@@ -8,12 +8,12 @@ Intro
 		This demo reads the status of a push button and toggles between powering one
 		out of two LEDs. 
 
-	This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417) 
+	This project is written in C, and was written in Atmel Studio 7 (Version 7.0.1417) 
 
-	This project uses the Arduino Uno R3, equiped with an Atmel ATmega328P
+	This project uses the Arduino Uno R3, equipped with an Atmel ATmega328P
 
 Contents:
-	A) Including This Code In Your AtmelStudio Project
+	A) Including This Code In Your Atmel Studio Project
 	B) Making Contributions to This Code
 	C) MIT LICENSE
 
@@ -47,8 +47,8 @@ A) Including This Code In Your AtmelStudio Project
 			
 			
 			
-		I) Install Atemel Studio IDE
-			You can download the Ateml Studio 7 Integrated Development Environment here:
+		I) Install Atmel Studio IDE
+			You can download the Atmel Studio 7 Integrated Development Environment here:
 				http://www.atmel.com/microsite/atmel-studio/
 			
 			Follow the Installer Instructions
@@ -62,14 +62,14 @@ A) Including This Code In Your AtmelStudio Project
 			*	b)Determine your COM port 
 			*	c)Add avrdude.exe to Atmel Studio
 			***********************************************************************/
-				You will need to show Atmel Studio where the Arduino Uno USB Programer 
+				You will need to show Atmel Studio where the Arduino Uno USB Programmer 
 				(called "avrdude.exe) is on your computer. 
 		
 				You will also need to specify which COM port arvdude.exe should use to 
 				program the Arduino Uno
 				
 				
-			a)Find "avrdude.exe"
+			a) Find "avrdude.exe"
 					
 				On most installs "avrdude.exe" can be found on your computer at:
 					C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
@@ -77,7 +77,7 @@ A) Including This Code In Your AtmelStudio Project
 				Once found, save the path somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio" 
 					
 		
-			b)Determine your COM port 
+			b) Determine your COM port 
 					
 				Plug your Arduino Uno into your computer with a USB cable.
 					
@@ -95,14 +95,14 @@ A) Including This Code In Your AtmelStudio Project
 				
 				Save the COM number somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio"
 		
-			c)Add avrdude.exe to Atmel Studio
+			c) Add avrdude.exe to Atmel Studio
 					
 				In Atmel Studio select:
 					Tools -> "External Tools"
 			
 				Press the "Add" button.
 		
-				For the new tool, fill out the feilds as follows:
+				For the new tool, fill out the fields as follows:
 			
 					Title: Send to the Arduino Uno
 					Command: <put the full path to avrdude.exe here>
@@ -129,12 +129,12 @@ A) Including This Code In Your AtmelStudio Project
 				Select a "GCC C ASF Board Project" 
 				
 				Name the project whatever you would like,
-				and update the "Location" feild to wherever
+				and update the "Location" field to wherever
 				you want the project to live on your computer.
 					
 				Select "OK"
 
-				You will see a long list of different microcontrolers.
+				You will see a long list of different microcontrollers.
 				
 				Select the "Atmega328P"
 					You can use the Search tool in the top right hand corner
@@ -154,7 +154,7 @@ A) Including This Code In Your AtmelStudio Project
 	
 	
 	
-		IV)Sanity Check
+		IV) Sanity Check
 			Ooof. Alright. If you did all of that correctly, 
 			you should be able to build the new project without errors
 			And send the built code to the Arduino Uno to run. 
@@ -178,14 +178,14 @@ A) Including This Code In Your AtmelStudio Project
 				a list of status messages, the last of which will be:
 					"avrdude.exe done.  Thank you."
 
-				If not sucessfull, it will display some error message like:
+				If not successful, it will display some error message like:
 					"avrdude.exe: ser_open(): can't open device "\\.\COM5": Access is denied."
 					
 		
 		
 		
 		
-	1) Dowload From Github
+	1) Download From Github
 		
 		
 		If you are not comfortable with git, download the code as a zip file from the URL below.
@@ -201,9 +201,9 @@ A) Including This Code In Your AtmelStudio Project
 			
 	
 
-	2) Add the Folder as a Source Location in AtemlStudio
+	2) Add the Folder as a Source Location in Atmel Studio
 	
-		Show Folder in AtemelStudio Solution sindow
+		Show Folder in Atmel Studio Solution window
 			At the top of the Solution Explorer window, select "Show All Files" in the toolbar.
 			
 			All the files contained within the project directory should now be visible.
@@ -231,7 +231,7 @@ A) Including This Code In Your AtmelStudio Project
 			The quickest way to start actually using the code is to use the functions found in:
 				"ButtonToggleLedDemo.h"
 		
-			I recomend you also read/use the simple test framework found at:
+			I recommend you also read/use the simple test framework found at:
 				"Tests/TestButtonToggleLedDemo.h"
 			It contains a few simple tests, and can be easily extended with your own.	
 
