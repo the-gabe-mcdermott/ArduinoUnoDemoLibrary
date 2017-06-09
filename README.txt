@@ -21,34 +21,29 @@ Contents:
 
 A) Including This Code In Your AtmelStudio Project
 	
-	Steps:
-
-		0) Setup Atmel Studio IDE and Create a New Arduino Uno Project
-			(Windows 10 instructions)
-			I) 		Install Atmel Studio IDE
-			II) 	Setup the Arduino Uno USB Programmer "avrdude.exe"
-			III) 	Create a new Atmel Studio project for the Arduino Uno
-			IV) 	Sanity Check
-		
-		
-		1) Download Code From Github
-		
-		2) Add the Folder as a Source Location in AtmelStudio
-		
-		3) Include into your project main
-
-		
+	/*****************************************************************************
+	* Steps:
+	*
+	*	0) Setup Atmel Studio IDE and Create a New Arduino Uno Project
+	*		(Windows 10 instructions)
+	*	
+	*	1) Download Code From Github
+	*	
+	*	2) Add the Folder as a Source Location in AtmelStudio
+	*	
+	*	3) Include into your project main
+	*
+	*****************************************************************************/	
+	
 	0) Setup Atmel Studio IDE and Create a New Arduino Uno Project
-		
-		Note these setup instructions are written for Windows 10 systems. 
-		
-		Steps:
-			I) 		Install Atmel Studio IDE
-			II) 	Setup the Arduino Uno USB Programmer "avrdude.exe"
-			III) 	Create a new Atmel Studio project for the Arduino Uno
-			IV) 	Sanity Check
-			
-			
+		/**************************************************************************
+		* Steps:
+		*	I) 		Install Atmel Studio IDE
+		*	II) 	Setup the Arduino Uno USB Programmer "avrdude.exe"
+		*	III) 	Create a New Project for the Arduino Uno
+		*	IV) 	Sanity Check
+		*******************************************************************************/	
+			Note these setup instructions are written for Windows 10 systems. 
 			
 			
 			
@@ -59,76 +54,73 @@ A) Including This Code In Your AtmelStudio Project
 			Follow the Installer Instructions
 			
 			
-			
-			
 		
 		II) Setup the Arduino Uno USB Programmer "avrdude.exe"
-			
+			/***********************************************************************
+			* Steps:
+			*	a)Find "avrdude.exe"
+			*	b)Determine your COM port 
+			*	c)Add avrdude.exe to Atmel Studio
+			***********************************************************************/
 				You will need to show Atmel Studio where the Arduino Uno USB Programer 
 				(called "avrdude.exe) is on your computer. 
 		
 				You will also need to specify which COM port arvdude.exe should use to 
 				program the Arduino Uno
 				
-				Steps:
-					a)Find "avrdude.exe"
-					b)Determine your COM port 
-					c)Add avrdude.exe to Atmel Studio
-		
-				a)Find "avrdude.exe"
+				
+			a)Find "avrdude.exe"
 					
-					On most installs "avrdude.exe" can be found on your computer at:
-						C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
+				On most installs "avrdude.exe" can be found on your computer at:
+					C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
 					
-					Once found, save the path somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio" 
+				Once found, save the path somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio" 
 					
 		
-				b)Determine your COM port 
+			b)Determine your COM port 
 					
-					Plug your Arduino Uno into your computer with a USB cable.
+				Plug your Arduino Uno into your computer with a USB cable.
 					
-					Open the Windows Device Manager
+				Open the Windows Device Manager
 					
-					In the list of device types select the drop down button for "Ports(COM & LPT)"
+				In the list of device types select the drop down button for "Ports(COM & LPT)"
+				
+				In the list of Ports you should see listed:
+					"Arduino Uno (COM#)"
+				Where the "#" is the serial port number your computer has assigned
+				the Arduino Uno
 					
-					In the list of Ports you should see listed:
-						"Arduino Uno (COM#)"
-					Where the "#" is the serial port number your computer has assigned
-					the Arduino Uno
-					
-						Ex:
-							Arduino Uno (COM4)
-					
-					Save the COM number somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio"
+					Ex:
+						Arduino Uno (COM4)
+				
+				Save the COM number somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio"
 		
-				c)Add avrdude.exe to Atmel Studio
+			c)Add avrdude.exe to Atmel Studio
 					
-					In Atmel Studio select:
-						Tools -> "External Tools"
+				In Atmel Studio select:
+					Tools -> "External Tools"
 			
-					Press the "Add" button.
+				Press the "Add" button.
+		
+				For the new tool, fill out the feilds as follows:
 			
-					For the new tool, fill out the feilds as follows:
-			
-						Title: Send to the Arduino Uno
-						Command: <put the full path to avrdude.exe here>
-						Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P <put your COM port here> -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
+					Title: Send to the Arduino Uno
+					Command: <put the full path to avrdude.exe here>
+					Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P <put your COM port here> -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
 
-						Ex:
-							Title: Send to the Arduino Uno
-							Command: C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
-							Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P COM5 -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
-						
-					Press "Apply" and then "OK".
+					Ex:
+						Title: Send to the Arduino Uno
+						Command: C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
+						Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P COM5 -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i						
+				
+				Press "Apply" and then "OK".
 			
-					You should now see the "Send to Arduino Uno" option under to "Tools" menu."
-					You will use this to program the Arduino Uno with your code.
+				You should now see the "Send to Arduino Uno" option under to "Tools" menu."
+				You will use this to program the Arduino Uno with your code.
 					
 					
-					
-					
-		III) Create a New Arduino Uno Project
-			Once Atmel Studio is Installed, create a new Arduino Uno Project
+		III) Create a New Project for the Arduino Uno
+			Once Atmel Studio is Installed, create a new project for the Arduino Uno
  				Select: 
 					File->New Project
 				
@@ -166,34 +158,29 @@ A) Including This Code In Your AtmelStudio Project
 			Ooof. Alright. If you did all of that correctly, 
 			you should be able to build the new project without errors
 			And send the built code to the Arduino Uno to run. 
-				Steps:
-					a) Build the new Project
-					b) Send the Built Code to the Arduino Uno
 			
-				a) Build the new Project
-					In Atmel Studio select the Build toolbar
+			a) Build the new Project
+				In Atmel Studio select the Build toolbar
 				
-					Select "Build Solution"
+				Select "Build Solution"
 					
-					An output window should open. It will display either 
+				An output window should open. It will display either 
 					"Build Succeeded" or a list of errors.
 					
-				b) Send the Built Code to the Arduino Uno
-					Double check your Arduino is plugged into your computer.
+			b) Send the Built Code to the Arduino Uno
+				Double check your Arduino is plugged into your computer.
 					
-					In Atmel Studio select the Tools toolbar.
+				In Atmel Studio select the Tools toolbar.
+				
+				Select "Send to the Arduino Uno"
 					
-					Select "Send to the Arduino Uno"
-					
-					An output window should open. If successful, it will display
-					a list of status messages, the last of which will be:
-						"avrdude.exe done.  Thank you."
+				An output window should open. If successful, it will display
+				a list of status messages, the last of which will be:
+					"avrdude.exe done.  Thank you."
 
-					If not sucessfull, it will display some error message like:
-						"avrdude.exe: ser_open(): can't open device "\\.\COM5": Access is denied."
+				If not sucessfull, it will display some error message like:
+					"avrdude.exe: ser_open(): can't open device "\\.\COM5": Access is denied."
 					
-			
-		
 		
 		
 		
