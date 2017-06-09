@@ -14,7 +14,7 @@ Intro
 
 Contents:
 	A) Including This Code In Your AtmelStudio Project
-	B) Making Changes to This Code
+	B) Making Contributions to This Code
 	C) MIT LICENSE
 
 
@@ -231,14 +231,14 @@ A) Including This Code In Your AtmelStudio Project
 			
 	3)	Include into your project main
 			The quickest way to start actually using the code is to use the functions found in:
-				"ButtonToggleLedDemo."
+				"ButtonToggleLedDemo.h"
 		
 			I recomend you also read/use the simple test framework found at:
 				"Tests/TestButtonToggleLedDemo.h"
 			It contains a few simple tests, and can be easily extended with your own.	
 
 
-B) Making Changes to This Code
+B) Making Contributions to This Code
 
 	If you would like to contribute to this code, you can fork this repository
 	and save your changes in the new repo. 
