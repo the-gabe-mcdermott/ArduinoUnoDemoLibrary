@@ -8,7 +8,8 @@ Intro
 		This demo reads the status of a push button and toggles between powering one
 		out of two LEDs. 
 
-	This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417)
+	This project is written in C, and was written in AtmelStudio 7 (Version 7.0.1417) 
+
 	This project uses the Arduino Uno R3, equiped with an Atmel ATmega328P
 
 Contents:
@@ -22,20 +23,113 @@ A) Including This Code In Your AtmelStudio Project
 	
 	Steps:
 
-		0) Install Atmel Studio 7 and Create a New Arduino Uno Project
-		1) Configure Atmel Studio to Use Arduino Uno USB Driver
-		2) Download Fom Github
-		3) Add the Folder as a Source Location in AtemlStudio
-		4) Include into your project main
+		0) Setup Atmel Studio IDE and Create a New Arduino Uno Project
+			(Windows 10 instructions)
+			I) 		Install Atmel Studio IDE
+			II) 	Setup the Arduino Uno USB Programmer "avrdude.exe"
+			III) 	Create a new Atmel Studio project for the Arduino Uno
+			IV) 	Sanity Check
+		
+		
+		1) Download Code From Github
+		
+		2) Add the Folder as a Source Location in AtmelStudio
+		
+		3) Include into your project main
 
-
-		0) Install Ateml Studio 7 and Create a New Arduino Uno Project
-			You can download Ateml Studio 7 here:
-				http://www.atmel.com/microsite/atmel-studio/
-			Follow the Installer Instrctions
+		
+	0) Setup Atmel Studio IDE and Create a New Arduino Uno Project
+		
+		Note these setup instructions are written for Windows 10 systems. 
+		
+		Steps:
+			I) 		Install Atmel Studio IDE
+			II) 	Setup the Arduino Uno USB Programmer "avrdude.exe"
+			III) 	Create a new Atmel Studio project for the Arduino Uno
+			IV) 	Sanity Check
 			
+			
+			
+			
+			
+		I) Install Atemel Studio IDE
+			You can download the Ateml Studio 7 Integrated Development Environment here:
+				http://www.atmel.com/microsite/atmel-studio/
+			
+			Follow the Installer Instructions
+			
+			
+			
+			
+		
+		II) Setup the Arduino Uno USB Programmer "avrdude.exe"
+			
+				You will need to show Atmel Studio where the Arduino Uno USB Programer 
+				(called "avrdude.exe) is on your computer. 
+		
+				You will also need to specify which COM port arvdude.exe should use to 
+				program the Arduino Uno
+				
+				Steps:
+					a)Find "avrdude.exe"
+					b)Determine your COM port 
+					c)Add avrdude.exe to Atmel Studio
+		
+				a)Find "avrdude.exe"
+					
+					On most installs "avrdude.exe" can be found on your computer at:
+						C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
+					
+					Once found, save the path somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio" 
+					
+		
+				b)Determine your COM port 
+					
+					Plug your Arduino Uno into your computer with a USB cable.
+					
+					Open the Windows Device Manager
+					
+					In the list of device types select the drop down button for "Ports(COM & LPT)"
+					
+					In the list of Ports you should see listed:
+						"Arduino Uno (COM#)"
+					Where the "#" is the serial port number your computer has assigned
+					the Arduino Uno
+					
+						Ex:
+							Arduino Uno (COM4)
+					
+					Save the COM number somewhere. You will need it for "c)Add avrdude.exe to Atmel Studio"
+		
+				c)Add avrdude.exe to Atmel Studio
+					
+					In Atmel Studio select:
+						Tools -> "External Tools"
+			
+					Press the "Add" button.
+			
+					For the new tool, fill out the feilds as follows:
+			
+						Title: Send to the Arduino Uno
+						Command: <put the full path to avrdude.exe here>
+						Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P <put your COM port here> -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
+
+						Ex:
+							Title: Send to the Arduino Uno
+							Command: C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
+							Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P COM5 -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
+						
+					Press "Apply" and then "OK".
+			
+					You should now see the "Send to Arduino Uno" option under to "Tools" menu."
+					You will use this to program the Arduino Uno with your code.
+					
+					
+					
+					
+		III) Create a New Arduino Uno Project
 			Once Atmel Studio is Installed, create a new Arduino Uno Project
-				Select: 
+ 				Select: 
 					File->New Project
 				
 				You will see a list of project types you can use.
@@ -64,38 +158,65 @@ A) Including This Code In Your AtmelStudio Project
 				will be the Solution Explorer Pane. The Solution Explorer
 				Pane will show a "src" directory, inside of which will be
 				the project "main.c"
-					
-	1) Configure Atmel Studio to Use Arduino Uno USB Driver	
-		You will need to show Atmel Studio where the Arduino Uno USB Driver is on
-		your computer. You will also need to specify which COM port Atmel Studio should use
-		to program the Aruduino.
-		
-			Plug your Arduino Uno into your computer with a USB cable.
-		
-			Title: Send to Arduino UNO
-			Command: C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe
-			Arguments: -C "C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf" -p atmega328p -c arduino -P COM5 -b 115200 -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
-
-	2) Dowload From Github
-		
-	To get the source files on your computer, you can either download them from Github
-	as a zip file, or clone the repository.
-			
-	Download ZIP:
-		https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
-		Click the "Clone or Download" button near the top left corner of the page.
-
-	Clone Repo:
-		You will want to Clone the repo into your AtmelStudio "src" folder.
-
-		You can use any number of git tools for whatever OS you are using. 
 	
-		If you have git installed as a command line tool, navigate to the "src" folder and call
+	
+	
+	
+		IV)Sanity Check
+			Ooof. Alright. If you did all of that correctly, 
+			you should be able to build the new project without errors
+			And send the built code to the Arduino Uno to run. 
+				Steps:
+					a) Build the new Project
+					b) Send the Built Code to the Arduino Uno
+			
+				a) Build the new Project
+					In Atmel Studio select the Build toolbar
 				
-	git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
+					Select "Build Solution"
+					
+					An output window should open. It will display either 
+					"Build Succeeded" or a list of errors.
+					
+				b) Send the Built Code to the Arduino Uno
+					Double check your Arduino is plugged into your computer.
+					
+					In Atmel Studio select the Tools toolbar.
+					
+					Select "Send to the Arduino Uno"
+					
+					An output window should open. If successful, it will display
+					a list of status messages, the last of which will be:
+						"avrdude.exe done.  Thank you."
 
+					If not sucessfull, it will display some error message like:
+						"avrdude.exe: ser_open(): can't open device "\\.\COM5": Access is denied."
+					
+			
+		
+		
+		
+		
+		
+	1) Dowload From Github
+		
+		To get the source files on your computer, you can either download them from Github
+		as a zip file, or clone the repository.
+				
+		Download ZIP:
+			https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample
+			Click the "Clone or Download" button near the top left corner of the page.
 
-	3) Add the Folder as a Source Location in AtemlStudio
+		Clone Repo:
+			You will want to Clone the repo into your AtmelStudio "src" folder.
+
+			You can use any number of git tools for whatever OS you are using. 
+	
+			If you have git installed as a command line tool, navigate to the "src" folder and call			
+				git clone https://github.com/the-gabe-mcdermott/ArduinoUnoLEDandToggleButtonExample.git
+	
+
+	2) Add the Folder as a Source Location in AtemlStudio
 	
 		Show Folder in AtemelStudio Solution sindow
 			At the top of the Solution Explorer window, select "Show All Files" in the toolbar.
@@ -121,7 +242,7 @@ A) Including This Code In Your AtmelStudio Project
 			
 			Close the properties window
 			
-	4)	Include into your project main
+	3)	Include into your project main
 			The quickest way to start actually using the code is to use the functions found in:
 				"ButtonToggleLedDemo."
 		
